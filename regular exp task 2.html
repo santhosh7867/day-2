@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><h1>Password</h1></label>
+    <input type="text" id="id1"><br><br>
+    <button onclick="func()">login</button>
+    <script>
+         function func(){
+        let val=document.getElementById("id1").value
+        let pattern=/^[a-z][\w]+[\@][\.]$/
+        if(pattern.test(val)){
+
+            alert("LOGIN SUCCESSFULL")
+        }
+        else{
+            alert("LOGIN FAILED")
+        }
+    }
+   </script> 
+</body>
+</html>

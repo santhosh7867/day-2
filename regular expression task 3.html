@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile number Validation</title>
+</head>
+<body>
+    <label>Mobile Number Validation</label><br><br>
+    <input type="text" id="id1"><br><br>
+    <button onclick="func()">login</button>
+    <script>
+         function func(){
+        let val=document.getElementById("id1").value
+        let pattern=/^[6-9][\d]{9}$/gm
+        if(pattern.test(val)){
+
+            alert("Valid password")
+        }
+        else{
+            alert("Invalid password")
+        }
+    }
+   </script>    
+</body>
+</html>

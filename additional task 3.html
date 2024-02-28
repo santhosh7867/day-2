@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Text Addition</title>
+</head>
+<body>
+
+  <label for="textInput">Enter Text:</label>
+  <input type="text" id="textInput">
+  <button onclick="addText()">Add Text</button>
+
+  <br><br>
+
+  <label for="selectBox">Selection Box:</label>
+  <select id="selectBox"></select>
+
+  <br><br>
+
+  <label for="listBox">List Box:</label>
+  <ul id="listBox"></ul>
+
+  <script>
+    function addText() {
+      var textInput = document.getElementById('textInput');
+      var newText = textInput.value;
+      textInput.value = '';
+      addToSelectBox(newText);
+      addToListBox(newText);
+    }
+
+    function addToSelectBox(text) {
+      var selectBox = document.getElementById('selectBox');
+      var option = document.createElement('option');
+
+      var textNode = document.createTextNode(text);
+      option.appendChild(textNode);
+      selectBox.appendChild(option);
+    }
+
+    function addToListBox(text) {
+      var listBox = document.getElementById('listBox');
+      var listItem = document.createElement('li');
+      var textNode = document.createTextNode(text);
+      listItem.appendChild(textNode);
+      listBox.appendChild(listItem);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="func()">click</button>
+<script>
+func=()=>{
+let div=document.createElement("div")
+
+let text=document.createTextNode("login page")
+
+let input=document.createElement("input")
+
+let button=document.createElement("button")
+
+let buttonText=document.createTextNode("click")
+
+button.appendChild(buttonText)
+
+div.appendChild(text)
+div.appendChild(input)
+div.appendChild(button)
+document.body.appendChild(div)
+}
+</script>
+
+</body>
+</html>

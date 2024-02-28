@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+        }
+        img{
+            height: 40vh;
+            width: 25vw;
+            padding-left: 400px;
+        }
+        .yy{
+            margin-left: 430px;
+            background-color:rgb(251, 252, 249);
+            width: 20%;
+            border: 5px solid red;
+            border-radius: 20px;
+        }
+
+        #swoff{
+            margin-left: 95px;
+        }
+    </style>
+    </head>
+<body>
+    <div class="con">
+        
+        <div>
+            <img  id="light" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png">
+
+            
+        </div>
+        <div>
+            <img id="cat" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png">
+    
+        </div>
+       
+
+
+
+
+        <div>
+            <div class="yy">
+
+                <h1 id="onoff">SWITCH BORD</h1>
+                <button id="swoff" onclick="swoff()">OFF</button>
+                <button id="son" onclick="son()">ON</button>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <script>
+            function swoff(){
+                document.getElementById("light").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png"
+                document.getElementById("cat").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png"
+                document.getElementById("onoff").innerHTML="SWITCH OFF"
+                document.getElementById("swoff").style.backgroundColor="red"
+                document.getElementById("son").style.backgroundColor="green"
+            }
+             function son(){
+                document.getElementById("light").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+                document.getElementById("cat").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"
+                document.getElementById("onoff").innerHTML="SWITCH ON"
+                document.getElementById("swoff").style.backgroundColor="green"
+                document.getElementById("son").style.backgroundColor="red"
+
+
+
+
+            }
+
+
+
+
+    </script>
+    
+</body>
+</html>

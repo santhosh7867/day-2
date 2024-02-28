@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #movieDetails {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="movieDetails"></div>
+
+<script>
+    var movie = {
+        title: "leo",
+        casting: ["vijay", "Trisha krishnan", "sanjay dutt"],
+        directors: ["lokesh kanagaraj"],
+        music: "Aniruth",
+        posterImage: "https://akm-img-a-in.tosshub.com/indiatoday/images/media_bank/202309/thalapathy-vijay-leo-tamil-poster-out-203320658-16x9.jpg?VersionId=be5LnvEqRvSA8OfSA8xD15TN_mLDkF0p&size=690:388"
+    };
+
+    
+    function displayMovieDetails() {
+        var container = document.getElementById("movieDetails");
+        var titleElement = document.createElement("h1");
+        titleElement.textContent = movie.title;
+
+        var castingElement = document.createElement("p");
+        castingElement.textContent = "Casting: " + movie.casting.join(", ");
+
+        var directorsElement = document.createElement("p");
+        directorsElement.textContent = "Directors: " + movie.directors.join(", ");
+
+        var musicElement = document.createElement("p");
+        musicElement.textContent = "Music: " + movie.music;
+
+        var posterElement = document.createElement("img");
+        posterElement.src = movie.posterImage;
+        posterElement.alt = movie.title + " Poster";
+        container.appendChild(titleElement);
+        container.appendChild(castingElement);
+        container.appendChild(directorsElement);
+        container.appendChild(musicElement);
+        container.appendChild(posterElement);
+    }
+    displayMovieDetails();
+</script>
+
+</body>
+</html>
